@@ -1,0 +1,110 @@
+{% comment %} <div class="newsletter_popup">
+  <div class="half_block image">
+    <img src="{{ section.settings.image | img_url: '2500x2500' }}" alt="" preload />
+  </div>
+  <div class="half_block">
+    <div class="row"> 
+      <a href="/" title="Adidem Asterisks*" class="logo_btn">
+        {% include 'stacked-logo' %}    
+      </a>
+    </div>
+    <div class="row">
+      <div class="details">
+          <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/newsletter_details.png?v=1597566989">
+      </div>
+      <h1 class="title">{{ section.settings.heading }}</h1>
+      <p class="content">{{ section.settings.content }}</p>
+      <div class="site-footer__newsletter">
+        <form class="my-form omnisend-subscribe-form" action="/subscribe" method="post">
+          <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="input-group ">
+            <input type="email" name="contact[email]" id="popup-email" class="omnisend-subscribe-input-email" value="" placeholder="Enter your email here" aria-label="Email address" aria-required="true" required autocorrect="off" autocapitalize="off">
+            <span class="input-group__btn">
+              <button type="submit" class="btn newsletter__submit" name="commit" id="popup-subscribe">
+                <span class="newsletter__submit-text--large">Subscribe</span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row footer">
+      <div class="half_block copyright_wrap">
+        <p class="copyright">Copyright © {{ "now" | date: "%Y" }} ADIDEM ASTERISKS*</p>
+      </div>
+    </div>
+  </div>
+</div> {% endcomment %}
+
+
+
+<div class="newsletter_popup mobile">
+  {% comment %} <span class="close-icon">
+    {% include 'icon-close' %}
+  </span> {% endcomment %}
+  <div class="image" style="background: url('{{ section.settings.image | img_url: '2500x2500' }}');">
+    {% comment %} <img src="{{ section.settings.image | img_url: '2500x2500' }}" alt="" preload /> {% endcomment %}
+  </div>
+  <div class="capture">
+    <div class="row">
+      <p class="title">{{ section.settings.heading }}</p>
+      <p class="content">{{ section.settings.content }}</p>
+      <div class="site-footer__newsletter">
+        <form class="my-form omnisend-subscribe-form" action="/subscribe" method="post">
+          <input type="hidden" name="form_type" value="customer"><input type="hidden" name="utf8" value="✓">
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <div class="input-group">
+            <label for="popup-email">Email Address</label>
+            <input type="email" name="contact[email]" id="popup-email" class="omnisend-subscribe-input-email" value="" aria-label="Email address" aria-required="true" required autocorrect="off" autocapitalize="off">
+            <div id="country-field">
+              <label for="country" class="country-input">Country</label>
+              <input id="country" class="country-input" list="country" />
+              {% comment %} {% include 'country-list' %} {% endcomment %}
+            </div>
+            <span class="input-group__btn">
+              <button type="submit" class="btn newsletter__submit" name="commit" id="popup-subscribe">
+                <span class="newsletter__submit-text--large">Subscribe</span>
+              </button>
+            </span>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="row footer">
+      <span>You may unsubscribe at any time. To find out more, please visit our <a href="/pages/shipping-and-returns">Privacy Policy</a>.</span>
+      <span class="close-btn">Close</span>
+      {% comment %} <div class="half_block copyright_wrap">
+        <p class="copyright">Copyright © {{ "now" | date: "%Y" }} ADIDEM ASTERISKS*</p>
+      </div> {% endcomment %}
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "class": "newsletter",
+  "settings": [
+    {
+      "label": "Image",
+      "id": "image",
+      "type": "image_picker"
+    },
+    {
+      "label": "Heading",
+      "id": "heading",
+      "type": "text",
+      "default": "Join Our Family"
+    },
+    {
+      "label": "Content",
+      "id": "content",
+      "type": "textarea"
+    }
+  ]
+}
+{% endschema %}
+

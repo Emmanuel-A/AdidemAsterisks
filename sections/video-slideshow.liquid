@@ -1,0 +1,99 @@
+<div preload class="videoSlideshow">
+    {%- for block in section.blocks -%}
+        <div class="video-slide-wrap">
+            <a href="{{ block.settings.btn_link }}" target="_blank" class="video-slides fade">
+                <div class="block_info">
+                    <span class="video_text">{{ block.settings.video_text }}</span>
+                    <span class="video_btn">{{ block.settings.btn_text }}</span>
+                </div>
+                <video preload autoplay muted loop playsinline class="slide-show-video">
+                    <source src="{{ block.settings.video_link }}" type="video/mp4">
+                </video>
+            </a>
+        </div>
+    {%- endfor -%}  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+<div class="dot-wrapper">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+<script>
+    var slideIndex = 1;
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("video-slides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+
+    showSlides(slideIndex);
+    
+    setInterval(function () {
+        plusSlides(+1)
+    }, 35000);
+</script>
+
+{% schema %}
+{
+  "name": "Video Slideshow",
+  "class": "box-grid",
+  "blocks": [
+    {
+      "type": "video",
+      "name": "Video",
+      "settings": [
+        {
+          "label": "Video Link",
+          "id": "video_link",
+          "type": "url"
+        },
+        {
+          "label": "Video Image",
+          "id": "video_image",
+          "type": "image_picker"
+        },
+        {
+          "label": "Video Text",
+          "id": "video_text",
+          "type": "text"
+        },
+        {
+          "label": "Button text",
+          "id": "btn_text",
+          "type": "text"
+        },
+        {
+          "label": "Button link",
+          "id": "btn_link",
+          "type": "url"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
