@@ -708,6 +708,15 @@
       "home-blocks": {
         "type": "home-blocks",
         "blocks": {
+          "848c5234-a3d2-4707-a19d-c1d37c1f7c1f": {
+            "type": "home_blocks",
+            "settings": {
+              "image_mobile": "shopify:\/\/shop_images\/Artboard1.png",
+              "content": "Pre Spring 2022 Capsule",
+              "btnText": "View Collection",
+              "btnLink": "shopify:\/\/collections\/pre-spring-2022-capsule-collection"
+            }
+          },
           "1589949013741": {
             "type": "home_blocks",
             "settings": {
@@ -752,6 +761,7 @@
           }
         },
         "block_order": [
+          "848c5234-a3d2-4707-a19d-c1d37c1f7c1f",
           "1589949013741",
           "1589948891379",
           "1590125711645",
