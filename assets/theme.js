@@ -7529,6 +7529,8 @@ theme.FooterSection = (function() {
 
 
 $(document).ready(function() {
+  console.log('document ready');
+  $('.shipping-widget p').hide();
   
   var sections = new theme.Sections();
 
@@ -7717,7 +7719,7 @@ $(document).ready(function() {
     $('.size-row .sizes').click(function() {
       const sizeSelected = $(this).text();
       const sizeChart = $('.measurement-wrap');
-      const sizeChartAttr = $(sizeChart).attr("data-size").toString();
+      const sizeChartAttr = $(sizeChart).attr("data-size");
       const size = sizeSelected.toString().toLowerCase();
       console.log(sizeSelected);
       $(sizeChart).removeClass('show');
@@ -7743,7 +7745,7 @@ $(document).ready(function() {
       $('html body').removeClass('lockScroll');
       $('.overlay').hide();
       const sizeChart = $('.measurement-wrap');
-      const sizeChartAttr = $(sizeChart).attr("data-size").toString();
+      const sizeChartAttr = $(sizeChart).attr("data-size");
       const addBtn = $('button.btn.product-form__cart-submit');
       const disabledBtn = $('button.btn.product-form__cart-submit').attr('disabled');
       const size = sizeSelected.toString().toLowerCase();
@@ -7802,7 +7804,6 @@ $(document).ready(function() {
   //     $('.country-list').toggle();
   //   });
   // }
-
 
   function autocomplete(inp, arr) {
     /*the autocomplete function takes two arguments,
@@ -7957,6 +7958,9 @@ $(document).ready(function() {
 
 
 $(document).ready(function() {
+  // var cart = document.querySelector('.cart-subtotal').innerHTML;
+  // document.querySelector('.cart-subtotal').textContent = `$${cart.subtotal.toFixed(2)}`;
+
   $('.cart__product-information .cart__remove').on('click', function(evt) {
     setTimeout(function(){ 
       location.reload();
