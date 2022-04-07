@@ -715,7 +715,8 @@
               "image_mobile": "shopify:\/\/shop_images\/Artboard1.png",
               "content": "Pre Spring 2022 Capsule",
               "btnText": "View Collection",
-              "btnLink": "shopify:\/\/collections\/pre-spring-2022-capsule-collection"
+              "btnLink": "shopify:\/\/collections\/pre-spring-2022-capsule-collection",
+              "show-desktop": "no"
             }
           },
           "1589949013741": {
@@ -725,7 +726,8 @@
               "image_mobile": "shopify:\/\/shop_images\/barbarian-adidem-asterisks_3x_9c5ef1e0-6e49-4ac9-bb80-e7871c271dbe.jpg",
               "content": "BARBARIAN X ADIDEM ASTERISKS",
               "btnText": "SHOP NOW",
-              "btnLink": "shopify:\/\/collections\/barbarian-x-adidem-asterisks"
+              "btnLink": "shopify:\/\/collections\/barbarian-x-adidem-asterisks",
+              "show-desktop": "yes"
             }
           },
           "1589948891379": {
@@ -735,7 +737,8 @@
               "image_mobile": "shopify:\/\/shop_images\/desktop_2.png",
               "content": "ROOTS x ADIDEM ASTERISKS*",
               "btnText": "VIEW NOW",
-              "btnLink": "shopify:\/\/collections\/all"
+              "btnLink": "shopify:\/\/collections\/all",
+              "show-desktop": "yes"
             }
           },
           "1590125711645": {
@@ -746,6 +749,7 @@
               "strip_content": "SHOP LONG SLEEVE PIQUE SHIRT'S",
               "strip_btntext": "Shop Now",
               "strip_btnlink": "https:\/\/adidem.world\/collections\/all",
+              "show-desktop": "yes",
               "alignment": "left"
             }
           },
@@ -757,6 +761,7 @@
               "strip_content": "ASTERISKS* RADIO",
               "strip_btntext": "LISTEN NOW",
               "strip_btnlink": "shopify:\/\/pages\/sound",
+              "show-desktop": "yes",
               "alignment": "right"
             }
           }
