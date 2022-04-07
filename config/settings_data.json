@@ -1310,6 +1310,7 @@
         "blocks": {
           "5f44d4e6-88f9-4c56-9513-58e2751a66a9": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Focus_Pull_WIDE.mp4?v=1638042308",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1319,6 +1320,7 @@
           },
           "00e8e694-434d-4bf5-9dea-a23c69cb9d3f": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Artist_Engineer_WIDE.mp4?v=1638043369",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1328,6 +1330,7 @@
           },
           "cbc159e8-1c02-4ad1-94e2-896cf4e688e2": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Steady_cam_WIDE.mp4?v=1638120693",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1337,6 +1340,7 @@
           },
           "20a30651-fc3a-487f-804a-580cc1f0ad99": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Opening_WIDE.mp4?v=1638120946",
               "video_text": "Fall \/ Winter 21 Campaign",
