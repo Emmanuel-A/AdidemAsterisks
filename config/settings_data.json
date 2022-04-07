@@ -708,6 +708,16 @@
       "home-blocks": {
         "type": "home-blocks",
         "blocks": {
+          "848c5234-a3d2-4707-a19d-c1d37c1f7c1f": {
+            "type": "home_blocks",
+            "settings": {
+              "image_desktop": "shopify:\/\/shop_images\/Artboard1.png",
+              "image_mobile": "shopify:\/\/shop_images\/Artboard1.png",
+              "content": "Pre Spring 2022 Capsule",
+              "btnText": "View Collection",
+              "btnLink": "shopify:\/\/collections\/pre-spring-2022-capsule-collection"
+            }
+          },
           "1589949013741": {
             "type": "home_blocks",
             "settings": {
@@ -752,6 +762,7 @@
           }
         },
         "block_order": [
+          "848c5234-a3d2-4707-a19d-c1d37c1f7c1f",
           "1589949013741",
           "1589948891379",
           "1590125711645",
@@ -1310,6 +1321,7 @@
         "blocks": {
           "5f44d4e6-88f9-4c56-9513-58e2751a66a9": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Focus_Pull_WIDE.mp4?v=1638042308",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1319,6 +1331,7 @@
           },
           "00e8e694-434d-4bf5-9dea-a23c69cb9d3f": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Artist_Engineer_WIDE.mp4?v=1638043369",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1328,6 +1341,7 @@
           },
           "cbc159e8-1c02-4ad1-94e2-896cf4e688e2": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Steady_cam_WIDE.mp4?v=1638120693",
               "video_text": "Fall \/ Winter 21 Campaign",
@@ -1337,6 +1351,7 @@
           },
           "20a30651-fc3a-487f-804a-580cc1f0ad99": {
             "type": "video",
+            "disabled": true,
             "settings": {
               "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/FINAL_Opening_WIDE.mp4?v=1638120946",
               "video_text": "Fall \/ Winter 21 Campaign",
