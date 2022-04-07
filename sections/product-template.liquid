@@ -478,7 +478,7 @@
                 <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/tees-size-chart.jpg?v=1642289586">
               {% endif %}
               {% if product.type == "HOODED SWEATER" or product.type == "Hooded Sweater"  %}
-                {% include 'hoodie-sweater-size-chart' %}
+                {% comment %} {% include 'hoodie-sweater-size-chart' %} {% endcomment %}
               {% endif %}
               {% if product.type == "PANTS" or product.type == "Pants"  %}
                 <img src="{{ section.settings.pantsSize | img_url: '1080x1080' }}">
@@ -580,7 +580,7 @@
                 <img src="{{ section.settings.sweaterSize | img_url: '1080x1080' }}">
               {% endif %}
               {% if product.type == "HOODED SWEATER" or product.type == "Hooded Sweater" %}
-                {% include 'hoodie-sweater-size-chart' %}
+                {% comment %} {% include 'hoodie-sweater-size-chart' %} {% endcomment %}
               {% endif %}
               {% if product.type == "PANTS" or product.type == "Pants" %}
                 <img src="{{ section.settings.pantsSize | img_url: '1080x1080' }}">
