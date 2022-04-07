@@ -1,4 +1,4 @@
-<div preload class="videoSlideshow">
+<div preload class="videoSlideshow show-mobile-{{ block.settings.show-mobile }}">
     {%- for block in section.blocks -%}
         <div class="video-slide-wrap">
             <a href="{{ block.settings.btn_link }}" target="_blank" class="video-slides fade">
@@ -91,6 +91,22 @@
           "label": "Button link",
           "id": "btn_link",
           "type": "url"
+        },
+        {
+          "type": "radio",
+          "id": "show-mobile",
+          "label": "Show on mobile",
+          "options": [
+            {
+              "value": "yes",
+              "label": "Yes"
+            },
+            {
+              "value": "no",
+              "label": "No"
+            }
+          ],
+          "default": "no"
         }
       ]
     }

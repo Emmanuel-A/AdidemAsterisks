@@ -920,6 +920,11 @@ body {
                     position: relative;
                     .videoSlideshow {
                         position: relative;
+                        @media screen and (max-width: 767px) {
+                            &.show-mobile-no {
+                                display: none;
+                            }
+                        }
                         .video-slide-wrap {
                             a {
                                 position: relative;
