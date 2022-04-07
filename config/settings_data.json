@@ -711,7 +711,7 @@
           "848c5234-a3d2-4707-a19d-c1d37c1f7c1f": {
             "type": "home_blocks",
             "settings": {
-              "image_desktop": "shopify:\/\/shop_images\/Artboard1.png",
+              "image_desktop": "shopify:\/\/shop_images\/NUSCA-ADIDEM-ASTERISKS_-SPRING-CAPSULE-1-6.jpg",
               "image_mobile": "shopify:\/\/shop_images\/Artboard1.png",
               "content": "Pre Spring 2022 Capsule",
               "btnText": "View Collection",
@@ -1368,6 +1368,7 @@
           "20a30651-fc3a-487f-804a-580cc1f0ad99"
         ],
         "settings": {
+          "show-mobile": "no"
         }
       }
     },
