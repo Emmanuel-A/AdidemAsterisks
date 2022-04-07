@@ -1486,6 +1486,18 @@ body {
                             background-color: orange;
                         }
                     }
+                    .color-oxblood {
+                        &::before {
+                            content: '';
+                            display: inline-block;
+                            width: 8px;
+                            height: 8px;
+                            -moz-border-radius: 7.5px;
+                            -webkit-border-radius: 7.5px;
+                            border-radius: 7.5px;
+                            background-color: #650039;
+                        }
+                    }
                     .color {
                         color: transparent;
                         width: 15px;
@@ -2086,6 +2098,9 @@ body {
                             }
                           	&.color-orange {
                                 background-color: orange;
+                            }
+                            &.color-oxblood {
+                                background-color: #650039;
                             }
                             &.color-yellow {
                                 background-color: yellow;
@@ -2970,6 +2985,32 @@ body {
                                 max-width: 120%;
                                 margin-left: -10%;
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.all-collections {
+        .site-header {
+            box-shadow: none;
+        }
+        .shopify-section{ 
+            &.all-collections {
+                height: 70vh;
+                padding: 10px 0 0 13px;
+                .heading {
+                    margin: 20px 0 0;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                }
+                .collection-links {
+                    li {
+                        .link {
+                            font-size: 20px;
+                            font-weight: 600;
+                            text-transform: uppercase;
                         }
                     }
                 }
