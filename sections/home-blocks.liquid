@@ -1,7 +1,7 @@
     <div class="block_row_wrapper">    
         <div class="row">
             {% for block in section.blocks %}
-              <div class="half_block">
+              <div class="half_block show-desktop-{{ block.settings.show-desktop }}">
                 {% if block.settings.image_desktop != blank %}
                 {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
                 {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
@@ -165,7 +165,7 @@
               "label": "No"
             }
           ],
-          "default": "no"
+          "default": "yes"
         },
         {
           "type":      "radio",

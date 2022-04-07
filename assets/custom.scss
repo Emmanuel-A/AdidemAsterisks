@@ -1042,6 +1042,12 @@ body {
                             // }
                             .half_block {
                                 width: 50%;   
+                                &.show-desktop-no {
+                                    display: none;
+                                    @media screen and (max-width: 767px) {
+                                        display: block;
+                                    }
+                                }
                                 .desktop_image {
                                     display: block;
                                     width: 100%;
