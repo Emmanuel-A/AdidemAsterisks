@@ -14,24 +14,34 @@
     </div>
   </div>
   <div class="menu-container">
-      <p class="heading">Collection</p>
+      <p class="heading">Collections</p>
       <ul>
+        <li><a href="">Sounds Like It Looks©</a></li>
         <li><a href="">Fall/Winter 2022</a></li>
         <li><a href="">Spring/Summer 2021</a></li>
+        <li><a class="show-all" href="/pages/all-collections">Show all</a></li>
       </ul>
 
       <p class="heading">Category</p>
       <ul>
+        <li><a href="/collections/tops">New Arrivals</a></li>
         <li><a href="/collections/tops">Tops</a></li>
         <li><a href="/collections/sweaters">Sweaters</a></li>
         <li><a href="/collections/bottoms">Bottoms</a></li>
         <li><a href="/collections/hats">Hats</a></li>
-        <li><a href="/collections/all">Shop All</a></li>
+        <li><a href="/collections/pins">Accessories</a></li>
+        <li><a class="show-all" href="/collections/all">Shop All</a></li>
+      </ul>
+
+      <p class="heading">Focus</p>
+      <ul>
+        <li><a href="/pages/sound">Asterisks* Radio</a></li>
+        <li><a href="/pages/spotlight">Spotlight</a></li>
       </ul>
 
       <ul>
         <li><a href="/account">Account</a></li>
-        <li><a href="">Assistance</a></li>
+        <li><a href="/pages/shipping-and-returns">Assistance</a></li>
       </ul>
       
   </div>
@@ -87,15 +97,22 @@
         <a href="{{ section.settings.message_link }}" class="announcement-bar announcement-bar--link">
       {% endif %}
 
-        {% assign subtotal = cart.items_subtotal_price | money_without_currency %}
-        {% assign remainder = 250 %}
-        {% assign remainderTotal = remainder | minus: subtotal %}
+      {% assign subtotal = cart.items_subtotal_price | money_without_currency %}
+      {% assign remainder = 250 %}
+      {% assign remainderTotal = remainder | minus: subtotal %}
 
-        {% comment %} <div class="shipping-widget">
-          <p>You are <span class="cart-subtotal">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</span></p>
-        </div> {% endcomment %}
+      {% if remainderTotal <= 0 %}
+        <p class="announcement-bar__message">Free shipping</p>
+      {% else %}
+        <p class="announcement-bar__message">You are <span class="cart-subtotal" id="cart-subtotal-header">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</p>
+      {% endif %}
 
-        <p class="announcement-bar__message">You are <span class="cart-subtotal">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</p>
+      <script>
+        document.addEventListener("DOMContentLoaded", function(event) { 
+          let subtotal = {{ remainderTotal }};
+          document.getElementById('cart-subtotal-header').innerHTML = subtotal.toFixed(2);
+        });
+      </script>
 
       {% if section.settings.message_link == blank %}
         </div>
@@ -158,7 +175,7 @@
             {% include 'cart-popup' %}
           {%- endif -%} {% endcomment %}
 
-          </a>
+          {% comment %} </a> {% endcomment %}
           {% unless linklists[section.settings.main_linklist] == blank %}
             <button type="button" class="btn--link site-header__icon site-header__menu js-mobile-nav-toggle mobile-nav--open" aria-controls="MobileNav"  aria-expanded="false" aria-label="{{ 'layout.navigation.menu' | t }}">
               {% include 'icon-hamburger' %}

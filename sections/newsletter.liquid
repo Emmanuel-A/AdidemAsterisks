@@ -44,7 +44,6 @@
     {% include 'icon-close' %}
   </span> {% endcomment %}
   <div class="image" style="background: url('{{ section.settings.image | img_url: '2500x2500' }}');">
-    {% comment %} <img src="{{ section.settings.image | img_url: '2500x2500' }}" alt="" preload /> {% endcomment %}
   </div>
   <div class="capture">
     <div class="row">
@@ -60,7 +59,6 @@
             <div id="country-field">
               <label for="country" class="country-input">Country</label>
               <input id="country" class="country-input" list="country" />
-              {% comment %} {% include 'country-list' %} {% endcomment %}
             </div>
             <span class="input-group__btn">
               <button type="submit" class="btn newsletter__submit" name="commit" id="popup-subscribe">
@@ -74,13 +72,9 @@
     <div class="row footer">
       <span>You may unsubscribe at any time. To find out more, please visit our <a href="/pages/shipping-and-returns">Privacy Policy</a>.</span>
       <span class="close-btn">Close</span>
-      {% comment %} <div class="half_block copyright_wrap">
-        <p class="copyright">Copyright © {{ "now" | date: "%Y" }} ADIDEM ASTERISKS*</p>
-      </div> {% endcomment %}
     </div>
   </div>
 </div>
-
 
 
 {% schema %}

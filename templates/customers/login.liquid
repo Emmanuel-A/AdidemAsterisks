@@ -34,7 +34,7 @@
         {% endif %}
         
         {% if form.password_needed %}
-          <p class="forgot_password"><a href="/pages/recover" id="RecoverPassword">{{ 'customer.login.forgot_password' | t }}</a></p>
+          <p class="forgot_password"><a href="/pages/recover" id="RecoverPassword">{% comment%}{{ 'customer.login.forgot_password' | t }}{% endcomment %}</a></p>
         {% endif %}
 
         <p>

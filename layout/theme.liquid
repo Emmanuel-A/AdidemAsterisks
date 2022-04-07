@@ -209,8 +209,8 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
 
 <body class="template-{{ request.page_type | handle }} {{ page_title | handleize }}">
   <div class="preloader"></div>
+
   {%- assign formId = 'ContactFooter' -%}
-  <div class="popup_wrap" id="popup_wrap"></div>
   
   <a class="in-page-link visually-hidden skip-link" href="#MainContent">{{ 'general.accessibility.skip_to_content' | t }}</a>
 
@@ -243,29 +243,30 @@ window.supported_currencies = "{{ settings.mlvedaACS_supportedCurrencies }}";
 
 
   
- <script>
-   jQuery.getJSON('http://freegeoip.net/json/';, function(location) {
-   // If the visitor is browsing from Asia
-  if (location.cotinent_name == 'Asia') {
-    $("#currencies").val("USD");
-    $("#currencies").change();
-  }
-        // If the visitor is browsing from Europe
-  if (location.cotinent_name == 'Europe') {
-    $("#currencies").val("EUR");
-    $("#currencies").change();
-  }
-     
-        // If the visitor is browsing from GB
-  if (location.country_code == 'GB') {
-    $("#currencies").val("GBP");
-    $("#currencies").change();
-  }
-     
-     // If the visitor is browsing from USA
-  if (location.country_code == 'US') {
-    $("#currencies").val("USD");
-    $("#currencies").change();
-}
-     }
-</script>
+ {% comment %} <script>
+  jQuery.getJSON('http://freegeoip.net/json/';, function(location) {
+    // If the visitor is browsing from Asia
+    if (location.cotinent_name == 'Asia') {
+      $("#currencies").val("USD");
+      $("#currencies").change();
+    }
+
+    // If the visitor is browsing from Europe
+    if (location.cotinent_name == 'Europe') {
+      $("#currencies").val("EUR");
+      $("#currencies").change();
+    }
+      
+    // If the visitor is browsing from GB
+    if (location.country_code == 'GB') {
+      $("#currencies").val("GBP");
+      $("#currencies").change();
+    }
+      
+    // If the visitor is browsing from USA
+    if (location.country_code == 'US') {
+      $("#currencies").val("USD");
+      $("#currencies").change();
+    } 
+  });
+</script> {% endcomment %}

@@ -1,15 +1,33 @@
 <div class="page-width" data-section-id="{{ section.id }}" data-section-type="cart-template" data-ajax-enabled="{{ section.settings.cart_ajax_enable }}">
   
   <div class="shipping-widget">
-    {% assign subtotal = cart.items_subtotal_price | money_without_currency %}
+    {% comment %} {% assign subtotal = cart.items_subtotal_price | money_without_currency %}
     {% assign remainder = 250 %}
     {% assign remainderTotal = remainder | minus: subtotal %}
     
     {% if remainderTotal <= 0 %}
       <p><span class="cart-subtotal">free shipping</span></p>
     {% else %}
-      <p>You are <span class="cart-subtotal">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</span></p>
+      <p>You are <span class="cart-subtotal" id="cart-subtotal">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</span></p>
+    {% endif %} {% endcomment %}
+
+
+    {% assign subtotal = cart.items_subtotal_price | money_without_currency %}
+    {% assign remainder = 250 %}
+    {% assign remainderTotal = remainder | minus: subtotal %}
+
+    {% if remainderTotal <= 0 %}
+      <p class="">Free shipping</p>
+    {% else %}
+      <p class="">You are <span class="cart-subtotal" id="cart-subtotal">${{ remainderTotal }}</span> away from <span class="free-shipping">free shipping</p>
     {% endif %}
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) { 
+        let subtotal = {{ remainderTotal }};
+        document.getElementById('cart-subtotal').innerHTML = subtotal.toFixed(2);
+      });
+    </script>
   </div>
 
   <div {% if cart.item_count == 0 %}class="hide" {% endif %}data-cart-wrapper>
@@ -435,12 +453,7 @@
                     {%- endfor -%}
                   </div>
                 </div>
-
-                <div class="cart-subtotal">
-                  <span class="cart-subtotal__title">{{ 'cart.general.subtotal' | t }}</span>
-                  <span class="cart-subtotal__price" data-cart-subtotal>{{ cart.total_price | money_with_currency }}</span>
-                </div>
-
+                
                 {%- capture taxes_shipping_checkout -%}
                   {%- if shop.taxes_included and shop.shipping_policy.body != blank -%}
                     {{ 'cart.general.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url }}
