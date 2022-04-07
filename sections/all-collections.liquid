@@ -1,5 +1,5 @@
-<div class="mega-menu ">
-  <div class="header">
+<div class="all-collections">
+  {% comment %} <div class="header">
     <div class="logo-container">
       <div class="logo">
         <a href="/">{% include 'stacked-logo' %}</a>
@@ -12,18 +12,16 @@
         {% include 'icon-close' %}
       </button>
     </div>
-  </div>
-  <div class="menu-container">
-      <p class="heading">Collection</p>
-      <ul>
-        <li><a href="">The Prelude</a></li>
-        <li><a href="">Sounds Like It Looks©</a></li>
-        <li><a href="">Compliments of the Company</a></li>
-        <li><a href="">The Dream - 'A Life Offline Campaign'</a></li>
-        <li><a href="">Failing is Falling</a></li>
-        <li><a href="">Do it in the Dark</a></li>
-      </ul>
-  </div>
+  </div> {% endcomment %}
+  <p class="heading">Collection</p>
+  <ul>
+    <li><a href="">The Prelude</a></li>
+    <li><a href="">Sounds Like It Looks©</a></li>
+    <li><a href="">Compliments of the Company</a></li>
+    <li><a href="">The Dream - 'A Life Offline Campaign'</a></li>
+    <li><a href="">Failing is Falling</a></li>
+    <li><a href="">Do it in the Dark</a></li>
+  </ul>
 </div>
 
 
@@ -33,22 +31,31 @@
   "name": "All Collections",
   "class": "all-collections",
   "settings": [
+    {
+      "label": "Content",
+      "id": "content",
+      "type": "textarea"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
         {
-            "label": "Content",
-            "id": "content",
-            "type": "textarea"
+          "type": "text",
+          "id": "collection-name",
+          "label": "Collection Name",
+          "default": "The Prelude"
+        },
+        {
+          "type": "url",
+          "id": "collection-link",
+          "label": "Collection Link"
         }
-    ],
-    "blocks": [
-        {
-            "type": "text",
-            "settings": {
-                "type": "text",
-                "id": "",
-                "": ""
-            }
-        }      
-    ]
+      ] 
+    }     
+  ]
 }
 {% endschema %}
 

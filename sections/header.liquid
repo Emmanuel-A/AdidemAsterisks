@@ -16,15 +16,16 @@
   <div class="menu-container">
       <p class="heading">Collections</p>
       <ul>
-        <li><a href="">Sounds Like It Looks©</a></li>
-        <li><a href="">Fall/Winter 2022</a></li>
-        <li><a href="">Spring/Summer 2021</a></li>
+        <li><a href="/pages/fall-winter-campaign">The Prelude</a></li>
+        <li><a href="/pages/sound-like-it-looks-campaign">Sounds Like It Looks©</a></li>
+        <li><a href="/pages/compliments-of-the-company-lookbook">Compliments of the Company</a></li>
+        <li><a href="/pages/the-dream-a-life-offline-campaign">The Dream - 'A Life Online'</a></li>
         <li><a class="show-all" href="/pages/all-collections">Show all</a></li>
       </ul>
 
       <p class="heading">Category</p>
       <ul>
-        <li><a href="/collections/tops">New Arrivals</a></li>
+        <li><a href="/collections/pre-spring-2022-capsule-collections">New Arrivals</a></li>
         <li><a href="/collections/tops">Tops</a></li>
         <li><a href="/collections/sweaters">Sweaters</a></li>
         <li><a href="/collections/bottoms">Bottoms</a></li>
@@ -36,7 +37,7 @@
       <p class="heading">Focus</p>
       <ul>
         <li><a href="/pages/sound">Asterisks* Radio</a></li>
-        <li><a href="/pages/spotlight">Spotlight</a></li>
+        {% comment %} <li><a href="/pages/spotlight">Spotlight</a></li> {% endcomment %}
       </ul>
 
       <ul>
@@ -110,7 +111,7 @@
       <script>
         document.addEventListener("DOMContentLoaded", function(event) { 
           let subtotal = {{ remainderTotal }};
-          document.getElementById('cart-subtotal-header').innerHTML = subtotal.toFixed(2);
+          document.getElementById('cart-subtotal-header').innerHTML = '$'+subtotal.toFixed(2);
         });
       </script>
 

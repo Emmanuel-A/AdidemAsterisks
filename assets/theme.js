@@ -7529,9 +7529,7 @@ theme.FooterSection = (function() {
 
 
 $(document).ready(function() {
-  console.log('document ready');
-  $('.shipping-widget p').hide();
-  
+  console.log('document ready');  
   var sections = new theme.Sections();
 
   sections.register('cart-template', theme.Cart);
