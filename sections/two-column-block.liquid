@@ -88,7 +88,7 @@
             <p class="image_details">{{ block.settings.strip_content }}</p>
             <p class="shop_btn">{{ block.settings.strip_btntext }}</p>
           </span>
-          <img src="{{ block.settings.strip_desktop | img_url: '1080x1080', scale: 3 }}" class="desktop_image">
+          <img loading="lazy" src="{{ block.settings.strip_desktop | img_url: '1080x1080', scale: 3 }}" class="desktop_image">
           <img src="{{ block.settings.strip_mobile | img_url: '1024x1024', scale: 3 }}" class="mobile_image">
             {% comment %} {% include 'responsive-image' with
             image: block.settings.image | img_url: '1080x1080',
@@ -151,197 +151,203 @@
 
 {% schema %}
 {
-  "name": "Home Page Blocks",
-  "class": "box-grid",
-  "blocks": [
+    "name": "Home Page Blocks",
+    "class": "box-grid",
+    "blocks": [
     {
-      "type": "video",
-      "name": "Video",
-      "settings": [
-        {
-          "label": "Desktop Video Link",
-          "id": "video_link",
-          "type": "url"
-        },
-        {
-          "label": "Mobile Video Link",
-          "id": "mobileVideo_link",
-          "type": "url"
-        },
-        {
-          "label": "Video Image",
-          "id": "video_image",
-          "type": "image_picker"
-        },
-        {
-          "label": "Video Text",
-          "id": "video_text",
-          "type": "text"
-        },
-        {
-          "label": "Button text",
-          "id": "btn_text",
-          "type": "text"
-        },
-        {
-          "label": "Button link",
-          "id": "btn_link",
-          "type": "url"
-        }
-      ]
-    },
-    {
-      "type": "home_blocks",
-      "name": "Half Block",
-      "settings": [
-        {
-          "label": "Desktop Image",
-          "id": "image_desktop",
-          "type": "image_picker"
-        },
-         {
-          "label": "Mobile Image",
-          "id": "image_mobile",
-          "type": "image_picker"
-        },
-        {
-          "label": "Content",
-          "id": "content",
-          "type": "text"
-        },
-        {
-          "label": "Button text",
-          "id": "btnText",
-          "type": "text"
-        },
-        {
-          "label": "Button link",
-          "id": "btnLink",
-          "type": "url"
-        },
-        {
-          "type": "radio",
-          "id": "show-desktop",
-          "label": "Show on desktop",
-          "options": [
+        "type": "video",
+        "name": "Video",
+        "settings": [
             {
-              "value": "yes",
-              "label": "Yes"
+            "label": "Desktop Video Link",
+            "id": "video_link",
+            "type": "url"
             },
             {
-              "value": "no",
-              "label": "No"
-            }
-          ],
-          "default": "no"
-        }
-      ]
-    },
-    {
-      "type": "half_strip_blocks",
-      "name": "2 Column Blocks",
-      "settings": [
-        {
-          "label": "Desktop Image",
-          "id": "image_desktop",
-          "type": "image_picker"
-        },
-         {
-          "label": "Mobile Image",
-          "id": "image_mobile",
-          "type": "image_picker"
-        },
-        {
-          "label": "Content",
-          "id": "content",
-          "type": "text"
-        },
-        {
-          "label": "Button text",
-          "id": "btnText",
-          "type": "text"
-        },
-        {
-          "label": "Button link",
-          "id": "btnLink",
-          "type": "url"
-        },
-        {
-          "type": "radio",
-          "id": "show-desktop",
-          "label": "Show on desktop",
-          "options": [
-            {
-              "value": "yes",
-              "label": "Yes"
+            "label": "Mobile Video Link",
+            "id": "mobileVideo_link",
+            "type": "url"
             },
             {
-              "value": "no",
-              "label": "No"
-            }
-          ],
-          "default": "no"
-        }
-      ]
-    },
-    {
-      "type": "strip_blocks",
-      "name": "Strip Block",
-      "settings": [
-        {
-          "label": "Desktop Image",
-          "id": "strip_desktop",
-          "type": "image_picker"
-        },
-         {
-          "label": "Mobile Image",
-          "id": "strip_mobile",
-          "type": "image_picker"
-        },
-        {
-          "label": "Content",
-          "id": "strip_content",
-          "type": "text"
-        },
-        {
-          "label": "Button text",
-          "id": "strip_btntext",
-          "type": "text"
-        },
-        {
-          "label": "Button link",
-          "id": "strip_btnlink",
-          "type": "url"
-        },
-        {
-          "type": "radio",
-          "id": "show-desktop",
-          "label": "Show on desktop",
-          "options": [
-            {
-              "value": "yes",
-              "label": "Yes"
+            "label": "Video Image",
+            "id": "video_image",
+            "type": "image_picker"
             },
             {
-              "value": "no",
-              "label": "No"
+            "label": "Video Text",
+            "id": "video_text",
+            "type": "text"
+            },
+            {
+            "label": "Button text",
+            "id": "btn_text",
+            "type": "text"
+            },
+            {
+            "label": "Button link",
+            "id": "btn_link",
+            "type": "url"
             }
-          ],
-          "default": "yes"
+        ]
         },
         {
-          "type":      "radio",
-          "id":        "alignment",
-          "label":     "Text Alignment",
-          "options": [
-            { "value": "left", "label": "Left side" },
-            { "value": "right", "label": "Right side" }
-          ],
-          "default": "left"
+        "type": "home_blocks",
+        "name": "Half Block",
+        "settings": [
+            {
+            "label": "Desktop Image",
+            "id": "image_desktop",
+            "type": "image_picker"
+            },
+            {
+            "label": "Mobile Image",
+            "id": "image_mobile",
+            "type": "image_picker"
+            },
+            {
+            "label": "Content",
+            "id": "content",
+            "type": "text"
+            },
+            {
+            "label": "Button text",
+            "id": "btnText",
+            "type": "text"
+            },
+            {
+            "label": "Button link",
+            "id": "btnLink",
+            "type": "url"
+            },
+            {
+            "type": "radio",
+            "id": "show-desktop",
+            "label": "Show on desktop",
+            "options": [
+                {
+                "value": "yes",
+                "label": "Yes"
+                },
+                {
+                "value": "no",
+                "label": "No"
+                }
+            ],
+            "default": "no"
+            }
+        ]
+        },
+        {
+            "type": "half_strip_blocks",
+            "name": "2 Column Blocks",
+            "settings": [
+                {
+                "label": "Desktop Image",
+                "id": "image_desktop",
+                "type": "image_picker"
+                },
+                {
+                "label": "Mobile Image",
+                "id": "image_mobile",
+                "type": "image_picker"
+                },
+                {
+                "label": "Content",
+                "id": "content",
+                "type": "text"
+                },
+                {
+                "label": "Button text",
+                "id": "btnText",
+                "type": "text"
+                },
+                {
+                "label": "Button link",
+                "id": "btnLink",
+                "type": "url"
+                },
+                {
+                "type": "radio",
+                "id": "show-desktop",
+                "label": "Show on desktop",
+                "options": [
+                    {
+                    "value": "yes",
+                    "label": "Yes"
+                    },
+                    {
+                    "value": "no",
+                    "label": "No"
+                    }
+                ],
+                "default": "no"
+                }
+            ]
+        },
+        {
+            "type": "strip_blocks",
+            "name": "Strip Block",
+            "settings": [
+                {
+                "label": "Desktop Image",
+                "id": "strip_desktop",
+                "type": "image_picker"
+                },
+                {
+                "label": "Mobile Image",
+                "id": "strip_mobile",
+                "type": "image_picker"
+                },
+                {
+                "label": "Content",
+                "id": "strip_content",
+                "type": "text"
+                },
+                {
+                "label": "Button text",
+                "id": "strip_btntext",
+                "type": "text"
+                },
+                {
+                "label": "Button link",
+                "id": "strip_btnlink",
+                "type": "url"
+                },
+                {
+                "type": "radio",
+                "id": "show-desktop",
+                "label": "Show on desktop",
+                "options": [
+                    {
+                    "value": "yes",
+                    "label": "Yes"
+                    },
+                    {
+                    "value": "no",
+                    "label": "No"
+                    }
+                ],
+                "default": "yes"
+                },
+                {
+                "type":      "radio",
+                "id":        "alignment",
+                "label":     "Text Alignment",
+                "options": [
+                    { "value": "left", "label": "Left side" },
+                    { "value": "right", "label": "Right side" }
+                ],
+                    "default": "left"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ],
+    "presets": [
+        {
+            "name": "Two Column Block",
+            "category": "Block Elements"
+        }
+    ]
 }
 {% endschema %}
 

@@ -475,10 +475,10 @@
                 <img src="{{ section.settings.terryCrestShortsSize | img_url: '1080x1080' }}">
               {% endif %}
               {% if product.type == "SWEATERS" or product.type == "Sweaters"  %}
-                <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/tees-size-chart.jpg?v=1642289586">
+                {% comment %} <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/tees-size-chart.jpg?v=1642289586"> {% endcomment %}
               {% endif %}
               {% if product.type == "HOODED SWEATER" or product.type == "Hooded Sweater"  %}
-                {% comment %} {% include 'hoodie-sweater-size-chart' %} {% endcomment %}
+                <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/AdidemSizeChart-Hoodie.png?v=1655822318">
               {% endif %}
               {% if product.type == "PANTS" or product.type == "Pants"  %}
                 <img src="{{ section.settings.pantsSize | img_url: '1080x1080' }}">
@@ -580,7 +580,7 @@
                 <img src="{{ section.settings.sweaterSize | img_url: '1080x1080' }}">
               {% endif %}
               {% if product.type == "HOODED SWEATER" or product.type == "Hooded Sweater" %}
-                {% comment %} {% include 'hoodie-sweater-size-chart' %} {% endcomment %}
+                <img src="https://cdn.shopify.com/s/files/1/2706/0452/files/AdidemSizeChart-Hoodie.png?v=1655822318">
               {% endif %}
               {% if product.type == "PANTS" or product.type == "Pants" %}
                 <img src="{{ section.settings.pantsSize | img_url: '1080x1080' }}">
@@ -733,7 +733,7 @@
             {% endform %}
           </div>
         </div>
-        <p class="shipping_info">Free Canada Wide Shipping Over $200</p>
+        <p class="shipping_info">Free Canada Wide Shipping Over $250</p>
       </div>
     </div>
   </div>
