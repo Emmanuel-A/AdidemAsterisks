@@ -1033,6 +1033,16 @@
       "home-blocks": {
         "type": "home-blocks",
         "blocks": {
+          "bd3d4410-0d32-4f43-9eb1-97d13a5dc585": {
+            "type": "home_blocks",
+            "settings": {
+              "image_mobile": "shopify:\/\/shop_images\/sky-blue-fittted.jpg",
+              "content": "Sky Blue New Era Fitted",
+              "btnText": "Shop Now",
+              "btnLink": "shopify:\/\/collections\/all",
+              "show-desktop": "no"
+            }
+          },
           "848c5234-a3d2-4707-a19d-c1d37c1f7c1f": {
             "type": "home_blocks",
             "settings": {
@@ -1102,6 +1112,7 @@
           }
         },
         "block_order": [
+          "bd3d4410-0d32-4f43-9eb1-97d13a5dc585",
           "848c5234-a3d2-4707-a19d-c1d37c1f7c1f",
           "1589949013741",
           "1589948891379",
