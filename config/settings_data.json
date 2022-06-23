@@ -1685,7 +1685,12 @@
           "f5d18245-28ca-464d-9d58-76315f82216d"
         ],
         "settings": {
-          "show-mobile": "yes"
+          "show-mobile": "no"
+        }
+      },
+      "two-column-block": {
+        "type": "two-column-block",
+        "settings": {
         }
       }
     },
