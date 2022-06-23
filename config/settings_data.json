@@ -1036,6 +1036,7 @@
           "bd3d4410-0d32-4f43-9eb1-97d13a5dc585": {
             "type": "home_blocks",
             "settings": {
+              "image_desktop": "shopify:\/\/shop_images\/sky-blue-fittted.jpg",
               "image_mobile": "shopify:\/\/shop_images\/sky-blue-fittted.jpg",
               "content": "Sky Blue New Era Fitted",
               "btnText": "Shop Now",
