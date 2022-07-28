@@ -1037,6 +1037,7 @@
             "type": "home_blocks",
             "settings": {
               "image_desktop": "shopify:\/\/shop_images\/DESKTOP_480b008c-9afa-455b-9f2b-cc83a6e838e8.png",
+              "image_mobile": "shopify:\/\/shop_images\/DESKTOP_480b008c-9afa-455b-9f2b-cc83a6e838e8.png",
               "content": "SOUNDS© by Adidem Asterisks*",
               "btnText": "Shop Now",
               "btnLink": "shopify:\/\/collections\/sounds©-by-adidem-asterisks",
