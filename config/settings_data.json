@@ -1038,7 +1038,7 @@
             "settings": {
               "image_desktop": "shopify:\/\/shop_images\/DESKTOP3.png",
               "image_mobile": "shopify:\/\/shop_images\/DESKTOP3.png",
-              "content": "",
+              "content": "Women's Capsule Collection",
               "btnText": "Shop Now",
               "btnLink": "shopify:\/\/collections\/womens-capsule-collection",
               "show-desktop": "yes"
