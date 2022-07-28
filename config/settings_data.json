@@ -1040,7 +1040,7 @@
               "image_mobile": "shopify:\/\/shop_images\/DESKTOP3.png",
               "content": "",
               "btnText": "Shop Now",
-              "btnLink": "",
+              "btnLink": "shopify:\/\/collections\/womens-capsule-collection",
               "show-desktop": "yes"
             }
           },
