@@ -1740,6 +1740,17 @@
         "type": "two-column-block",
         "settings": {
         }
+      },
+      "collection-roots-x-adidem": {
+        "type": "collection-roots-x-adidem",
+        "settings": {
+          "title": "",
+          "collection": "roots-adidem-asterisks",
+          "grid": 3,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": false
+        }
       }
     },
     "content_for_index": [
