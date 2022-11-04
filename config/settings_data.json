@@ -1739,10 +1739,21 @@
               "btn_text": "",
               "btn_link": "shopify:\/\/collections\/all"
             }
+          },
+          "5cd856e2-7622-45eb-b492-25096d94c89d": {
+            "type": "video",
+            "settings": {
+              "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b45a6013ba44607adcb5b26f0e352b1.mp4",
+              "mobileVideo_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b45a6013ba44607adcb5b26f0e352b1.mp4",
+              "video_text": "",
+              "btn_text": "",
+              "btn_link": ""
+            }
           }
         },
         "block_order": [
-          "f5d18245-28ca-464d-9d58-76315f82216d"
+          "f5d18245-28ca-464d-9d58-76315f82216d",
+          "5cd856e2-7622-45eb-b492-25096d94c89d"
         ],
         "settings": {
           "show-mobile": "no"
