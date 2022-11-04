@@ -1033,6 +1033,17 @@
       "home-blocks": {
         "type": "home-blocks",
         "blocks": {
+          "1d8c5c2b-8d34-4055-942d-13d02690ddd5": {
+            "type": "home_blocks",
+            "settings": {
+              "image_desktop": "shopify:\/\/shop_images\/ousa-1.png",
+              "image_mobile": "shopify:\/\/shop_images\/ousa-1.png",
+              "content": "Roots x Adidem Asetrisks*",
+              "btnText": "Shop Now",
+              "btnLink": "shopify:\/\/collections\/roots-adidem-asterisks",
+              "show-desktop": "yes"
+            }
+          },
           "6e8da69c-e7a5-4ff2-8d15-15fb5f028eeb": {
             "type": "home_blocks",
             "settings": {
@@ -1107,7 +1118,7 @@
               "content": "ROOTS x ADIDEM ASTERISKS*",
               "btnText": "VIEW NOW",
               "btnLink": "shopify:\/\/collections\/all",
-              "show-desktop": "yes"
+              "show-desktop": "no"
             }
           },
           "1590125711645": {
@@ -1146,6 +1157,7 @@
           }
         },
         "block_order": [
+          "1d8c5c2b-8d34-4055-942d-13d02690ddd5",
           "6e8da69c-e7a5-4ff2-8d15-15fb5f028eeb",
           "6b7b3a7e-5989-4835-a830-29a5884830a4",
           "a7a51e3d-a0d3-4865-b185-b1f5e61dd936",
