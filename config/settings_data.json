@@ -1761,7 +1761,9 @@
           "grid": 3,
           "rows": 2,
           "show_vendor": false,
-          "show_view_all": false
+          "show_view_all": false,
+          "show_banner": true,
+          "banner": "shopify:\/\/shop_images\/Roots-Adidem-Camapign-3_1.png"
         }
       }
     },
