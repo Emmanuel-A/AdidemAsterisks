@@ -1739,21 +1739,10 @@
               "btn_text": "Shop Now",
               "btn_link": "shopify:\/\/collections\/roots-adidem-asterisks"
             }
-          },
-          "f5d18245-28ca-464d-9d58-76315f82216d": {
-            "type": "video",
-            "settings": {
-              "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/NP_169_1080_1.mp4?v=1653921897",
-              "mobileVideo_link": "",
-              "video_text": "Summer of Sounds",
-              "btn_text": "",
-              "btn_link": "shopify:\/\/collections\/all"
-            }
           }
         },
         "block_order": [
-          "5cd856e2-7622-45eb-b492-25096d94c89d",
-          "f5d18245-28ca-464d-9d58-76315f82216d"
+          "5cd856e2-7622-45eb-b492-25096d94c89d"
         ],
         "settings": {
           "show-mobile": "no"
