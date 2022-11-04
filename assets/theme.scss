@@ -2984,10 +2984,10 @@ hr {
   display: block;
   margin: 0 auto;
   width: 100%;
-  .grid-view-item__image-wrapper & {
-    position: absolute;
-    top: 0;
-  }
+  // .grid-view-item__image-wrapper & {
+  //   position: absolute;
+  //   top: 0;
+  // }
 
   &.lazyload {
     opacity: 0;

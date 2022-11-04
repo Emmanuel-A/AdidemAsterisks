@@ -31,7 +31,6 @@
       </li>
     {% else %}
 
-      {% for i in (1..product_limit) %}
         <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
           <div class="grid-view-item product-card">
             <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="#">
@@ -42,10 +41,8 @@
               {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
             </div>
             <div class="h4 grid-view-item__title" aria-hidden="true">{{ 'homepage.onboarding.product_title' | t }}</div>
-            {% include 'product-price' %}
           </div>
         </li>
-      {% endfor %}
     {% endfor %}
   </ul>
 

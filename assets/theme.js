@@ -8097,15 +8097,15 @@ $(theme.init);
 
 
 
-$(window).scroll(function() {
-  var sticky = $('.site-header'),
-      scroll = $(window).scrollTop();
-  if (scroll >= $('.announcement-bar').height()) {
-     $('.site-header').css({"top":"0", "background-color":"transparent"});  
-  } else {
-      $('.site-header').css({"top":"25px", "background-color":"transparent"});  
-  }
-});
+// $(window).scroll(function() {
+//   var sticky = $('.site-header'),
+//       scroll = $(window).scrollTop();
+//   if (scroll >= $('.announcement-bar').height()) {
+//      $('.site-header').css({"top":"0", "background-color":"transparent"});  
+//   } else {
+//       $('.site-header').css({"top":"25px", "background-color":"transparent"});  
+//   }
+// });
 
 
 

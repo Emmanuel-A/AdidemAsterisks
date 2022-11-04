@@ -1,10 +1,4 @@
-<div class="page-width">
-    {% if section.settings.title != blank %}
-      <div class="section-header text-center">
-        <h2>{{ section.settings.title | escape }}</h2>
-      </div>
-    {% endif %}
-  
+<div class="page-width"> 
     {%- assign collection = collections[section.settings.collection] -%}
   
     {% case section.settings.grid %}
@@ -25,7 +19,20 @@
     {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
   
     <ul class="grid grid--uniform grid--view-items">
-      {% for product in collection.products limit: product_limit %}
+      {% if section.settings.show_banner and section.settings.banner != blank %}
+        <div class="banner-image">
+          <img 
+            class="lazyload"
+            src="{{ section.settings.banner | img_url: '1080x1080' }}"
+            alt="{{ collection.title }}"
+            loading="lazy"
+            width="100"
+            height="100"
+          >
+        </div>
+      {% endif %}
+
+      {% for product in collection.products %}
         <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
           {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
         </li>
@@ -259,6 +266,17 @@
           "zh-TW": "顯示「檢視全部」按鈕"
         },
         "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "show_banner",
+        "label": "Show banner",
+        "default": false
+      },
+      {
+        "type": "image_picker",
+        "id": "banner",
+        "label": "Banner image"
       }
     ],
     "presets": [
