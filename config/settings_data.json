@@ -1033,6 +1033,17 @@
       "home-blocks": {
         "type": "home-blocks",
         "blocks": {
+          "1d8c5c2b-8d34-4055-942d-13d02690ddd5": {
+            "type": "home_blocks",
+            "settings": {
+              "image_desktop": "shopify:\/\/shop_images\/Desktop_afce75d3-12a5-4ec0-8c45-691b2b17393d.png",
+              "image_mobile": "shopify:\/\/shop_images\/Smaller.png",
+              "content": "Roots x Adidem Asetrisks*",
+              "btnText": "Shop Now",
+              "btnLink": "shopify:\/\/collections\/roots-adidem-asterisks",
+              "show-desktop": "yes"
+            }
+          },
           "6e8da69c-e7a5-4ff2-8d15-15fb5f028eeb": {
             "type": "home_blocks",
             "settings": {
@@ -1107,7 +1118,7 @@
               "content": "ROOTS x ADIDEM ASTERISKS*",
               "btnText": "VIEW NOW",
               "btnLink": "shopify:\/\/collections\/all",
-              "show-desktop": "yes"
+              "show-desktop": "no"
             }
           },
           "1590125711645": {
@@ -1146,6 +1157,7 @@
           }
         },
         "block_order": [
+          "1d8c5c2b-8d34-4055-942d-13d02690ddd5",
           "6e8da69c-e7a5-4ff2-8d15-15fb5f028eeb",
           "6b7b3a7e-5989-4835-a830-29a5884830a4",
           "a7a51e3d-a0d3-4865-b185-b1f5e61dd936",
@@ -1718,19 +1730,19 @@
       "video-slideshow": {
         "type": "video-slideshow",
         "blocks": {
-          "f5d18245-28ca-464d-9d58-76315f82216d": {
+          "5cd856e2-7622-45eb-b492-25096d94c89d": {
             "type": "video",
             "settings": {
-              "video_link": "https:\/\/cdn.shopify.com\/s\/files\/1\/2706\/0452\/files\/NP_169_1080_1.mp4?v=1653921897",
+              "video_link": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/1b45a6013ba44607adcb5b26f0e352b1.mp4",
               "mobileVideo_link": "",
-              "video_text": "Summer of Sounds",
-              "btn_text": "",
-              "btn_link": "shopify:\/\/collections\/all"
+              "video_text": "Roots x Adidem Asterisks*",
+              "btn_text": "Shop Now",
+              "btn_link": "shopify:\/\/collections\/roots-adidem-asterisks"
             }
           }
         },
         "block_order": [
-          "f5d18245-28ca-464d-9d58-76315f82216d"
+          "5cd856e2-7622-45eb-b492-25096d94c89d"
         ],
         "settings": {
           "show-mobile": "no"
@@ -1749,7 +1761,9 @@
           "grid": 3,
           "rows": 2,
           "show_vendor": false,
-          "show_view_all": false
+          "show_view_all": false,
+          "show_banner": true,
+          "banner": "shopify:\/\/shop_images\/Roots-Adidem-Camapign-3_1.png"
         }
       }
     },
