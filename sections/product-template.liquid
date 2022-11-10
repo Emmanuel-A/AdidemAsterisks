@@ -250,7 +250,6 @@
                 {% endfor %}
               {% endfor %} {% endcomment %}
 
-          {% if productTags contains 'Color' %}
             <div class="color_variant desktop">   
               {% for tag in product.tags limit:1 %}
                 {% assign collection_handle = tag | split: 'Collection:' | last | downcase %}
@@ -351,7 +350,6 @@
                 {% endif %}
               {% endfor %} {% endcomment %}
             </div>
-          {% endif %}
 
           <div class="size_variant">          
               <ul>
