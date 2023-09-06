@@ -1,5 +1,5 @@
 {% comment %}theme-check-disable ImgLazyLoading{% endcomment %}
-{{ 'component-collection-hero.css' | asset_url | stylesheet_tag }}
+{{ 'ea-component-collection-hero.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
   @media screen and (max-width: 749px) {
@@ -11,11 +11,29 @@
 
 <div class="collection-hero{% if section.settings.show_collection_image and collection.image %} collection-hero--with-image{% endif %} color-{{ section.settings.color_scheme }} gradient">
   <div class="collection-hero__inner page-width {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
+    <div class="collection-hero__sub-collections">
+      <ul>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'collection' -%}
+            {% unless block.settings.collection_link %}
+              {% continue %}
+            {% endunless %}
+            {% assign collectionsList = collections[block.settings.collection_link] %}
+            <li>
+              <a href="{{ collectionsList.url }}" class="{%- if request.path == collectionsList.url -%}active_collection{%- endif -%} {%- if collectionsList.title contains 'Sale' or collectionsList.title contains 'SALE' -%}sale_collection{%- endif -%}">
+                {{ collectionsList.title }} ({{ collectionsList.all_products_count }})
+              </a>
+          {%- endcase -%}
+        {% endfor %}
+      </ul>
+    </div>
     <div class="collection-hero__text-wrapper">
       <h1 class="collection-hero__title">
         <span class="visually-hidden">{{ 'sections.collection_template.title' | t }}: </span>
         {{- collection.title | escape -}}
       </h1>
+      <p class="collection-hero__product-count">{{ collection.all_products_count }} pieces</p>
 
       {%- if section.settings.show_collection_description -%}
         <div class="collection-hero__description rte">{{ collection.description }}</div>
@@ -72,6 +90,19 @@
       "id": "color_scheme",
       "label": "t:sections.all.colors.label",
       "default": "background-1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection_link",
+          "label": "Collection Link"
+        }
+      ]
     }
   ]
 }
